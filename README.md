@@ -97,6 +97,6 @@ The labels are impressions (labels=0), clicks (labels=1 or 2) and orders (labels
 |                      | cart_seq_shop_12m_10  | sequence of shop ids in the cart sequence (latest 10 carts in recent 12 months) |
 | Bias features        | near_expo_seq_c2      | sequence of second level category ids of the neighboring exposured products of the product |
 |                      | near_expo_seq_c3      | sequence of third level category ids of the neighboring exposured products of the product |
-|                      | em_page               | page number of the product exposed in the page               |
-|                      | em_position           | position number of the product exposed in the page           |
+|                      | page               | page number of the product exposed in the page               |
+|                      | position           | position number of the product exposed in the page           |
 
