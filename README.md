@@ -5,7 +5,7 @@ Deep Multifaceted Transformers for Multi-objective Ranking in Large-Scale E-comm
 
    DMT_code is the code for the paper "[Deep Multifaceted Transformers for Multi-objective Ranking in Large-Scale E-commerce Recommender Systems](https://dl.acm.org/doi/abs/10.1145/3336191.3371827)", which is published in CIKM 2020. 
 
-![The proposed framework](DMT.png)
+![The proposed framework](DMT.jpg)
 
 ## Requirements
 
