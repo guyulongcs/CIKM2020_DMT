@@ -44,7 +44,9 @@ In this paper, the two tasks are click prediction and order prediction.
 
 The goal of click prediction is to predict the CTR.
 
-The goal of order prediction is to predict the CTVR = CTR * CVR, which aims to eliminate the sample bias problem [1] in CVR task.
+The goal of order prediction is to predict the CTVR = CTR * CVR, which aims to eliminate the sample bias problem in CVR task [1] .
+
+CTR: Click-Throught Rate, CVR: ConVersion Rate.
 
 | **Type**   | **Click** **prediction** **(CTR)** | **Order** **prediction** **(CTVR)** |
 | ---------- | ---------------------------------- | ----------------------------------- |
@@ -113,5 +115,7 @@ The labels are impressions (labels=0), clicks (labels=1 or 2) and orders (labels
 |                      | position           | position number of the product exposed in the page           |
 
 
+
+References:
 
 [1] Entire Space Multi-Task Model: An Effective Approach for Estimating Post-Click Conversion Rate. In SIGIR 2018.
