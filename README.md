@@ -38,6 +38,20 @@ The shared dataset is sampled from the 0.7 billion dataset used in the paper.
 
 The datasets are used in "Deep Multifaceted Transformers for Multi-objective Ranking in Large-Scale E-commerce Recommender Systems", which is published in CIKM 2020.
 
+
+
+In this paper, the two tasks are click prediction and order prediction.
+
+The goal of click prediction is to predict the CTR.
+
+The goal of order prediction is to predict the CTVR = CTR * CVR, which aims to eliminate the sample bias problem [1] in CVR task.
+
+| **Type**   | **Click** **prediction** **(CTR)** | **Order** **prediction** **(CTVR)** |
+| ---------- | ---------------------------------- | ----------------------------------- |
+| Impression | 0                                  | 0                                   |
+| Click      | 1                                  | 0                                   |
+| Order      | 1                                  | 1                                   |
+
 ## Research Topics:
 
 This dataset can be used for research on CTR prediction, CVR prediction, multi-task ranking, sequential modeling, unbiased ranking in Recommender Systems. This dataset should only be used for research purpose!
@@ -54,8 +68,6 @@ Please cite the following paper if you use the data in any way.
   year={2020}
 }
 ```
-
-
 
 ## File Description:
 
@@ -100,3 +112,6 @@ The labels are impressions (labels=0), clicks (labels=1 or 2) and orders (labels
 |                      | page               | page number of the product exposed in the page               |
 |                      | position           | position number of the product exposed in the page           |
 
+
+
+[1] Entire Space Multi-Task Model: An Effective Approach for Estimating Post-Click Conversion Rate. In SIGIR 2018.
