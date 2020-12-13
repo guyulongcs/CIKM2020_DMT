@@ -46,7 +46,7 @@ The goal of click prediction is to predict the CTR.
 
 The goal of order prediction is to predict the CTVR = CTR * CVR, which aims to eliminate the sample bias problem in CVR task [1] .
 
-CTR: Click-Throught Rate, CVR: ConVersion Rate.
+CTR: Click-Through Rate, CVR: ConVersion Rate.
 
 | **Type**   | **Click** **prediction** **(CTR)** | **Order** **prediction** **(CTVR)** |
 | ---------- | ---------------------------------- | ----------------------------------- |
