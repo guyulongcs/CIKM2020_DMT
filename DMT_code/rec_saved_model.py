@@ -21,7 +21,6 @@ sys.path.append(file_path + '/conf')
 import recsys_conf as conf
 sys.path.append(file_path + '/util')
 from util import *
-from saved_model.export_embed_mlp_recall import export_embed_mlp_recall
 
 from saved_model.export_model import export_model
 from saved_model.export_model_imp import export_model_imp
@@ -32,11 +31,8 @@ def main(unused_argv=None):
   wnd_conf = conf.Conf(
           conf_path=args['conf_path'], 
           conf_file=args['conf_file'])
-  if wnd_conf[MODEL][MODEL_TYPE] == 'embed_mlp_recall':
-      export_embed_mlp_recall(wnd_conf, args['model_ckpt'])
-  else:
-      #export_model_imp(wnd_conf, args['model_ckpt'])
-      export_model(wnd_conf, args['model_ckpt'])
+
+  export_model(wnd_conf, args['model_ckpt'])
 
 
 if __name__ == '__main__':

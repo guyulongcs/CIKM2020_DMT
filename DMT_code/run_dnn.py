@@ -17,7 +17,8 @@ import recsys_conf as conf
 
 from data_feed import tfrecord_mask as tfrecord
 from data_feed import index_tables as lookup
-from metrics import metrics, metrics3, metrics2
+# from metrics import metrics, metrics3, metrics2
+from metrics import metrics
 from model import inference_mlp as inference
 
 sys.path.append(file_path + '/util')
@@ -44,16 +45,16 @@ def restore_session_from_checkpoint(sess, saver, checkpoint):
 def average_gradients(tower_grads):
     """Calculate the average gradient for each shared variable across all towers.
 
-	Note that this function provides a synchronization point across all towers.
+    Note that this function provides a synchronization point across all towers.
 
-	Args:
-	  tower_grads: List of lists of (gradient, variable) tuples. The outer list
-		is over individual gradients. The inner list is over the gradient
-		calculation for each tower.
-	Returns:
-	   List of pairs of (gradient, variable) where the gradient has been averaged
-	   across all towers.
-	"""
+    Args:
+      tower_grads: List of lists of (gradient, variable) tuples. The outer list
+        is over individual gradients. The inner list is over the gradient
+        calculation for each tower.
+    Returns:
+       List of pairs of (gradient, variable) where the gradient has been averaged
+       across all towers.
+    """
     average_grads = []
     for grad_and_vars in zip(*tower_grads):
         # Note that each grad_and_vars looks like the following:
@@ -879,17 +880,17 @@ def predict(wnd_conf, ckpt_name=None, test_tag="", test_score_method=""):
             version = wnd_conf.tag + '_' + test_tag
             checkpoint = 'ckpt-' + ckpt_name.split('-')[-1]
 
-            metrics3.save_to_local(wnd_conf[SCHEMA][HEADER_SCHEMA], header_list, test_click_logits_sigmoid_list,
-                                     test_order_logits_sigmoid_list, out_file_test,
-                                     version, checkpoint)
-            if "mmoe" in wnd_conf[MODEL][MODEL_TYPE]:
-                metrics3.save_weights_to_local(click_weight_value_list,
-                                                 order_weight_value_list)
+            # metrics3.save_to_local(wnd_conf[SCHEMA][HEADER_SCHEMA], header_list, test_click_logits_sigmoid_list,
+            #                          test_order_logits_sigmoid_list, out_file_test,
+            #                          version, checkpoint)
+            # if "mmoe" in wnd_conf[MODEL][MODEL_TYPE]:
+            #     metrics3.save_weights_to_local(click_weight_value_list,
+            #                                      order_weight_value_list)
             print("====================DONE========")
             df = pd.read_csv("./res/{0}_test_{1}.csv".format(version, checkpoint))
             # out_name = "./res/{0}_result_{1}.txt".format(version, checkpoint)
             out_name = out_file_test
-            metrics2.get_offline_metrics(df, out_name)
+            # metrics2.get_offline_metrics(df, out_name)
             print("finish", out_name)
             sys.exit(0)
 
