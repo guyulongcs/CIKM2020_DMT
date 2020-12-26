@@ -118,4 +118,4 @@ The labels are impressions (labels=0), clicks (labels=1 or 2) and orders (labels
 
 References:
 
-[1] Entire Space Multi-Task Model: An Effective Approach for Estimating Post-Click Conversion Rate. In SIGIR 2018.
+[1] Ma, Xiao, Liqin Zhao, Guan Huang, Zhi Wang, Zelin Hu, Xiaoqiang Zhu, and Kun Gai. "Entire space multi-task model: An effective approach for estimating post-click conversion rate." SIGIR'2018.
